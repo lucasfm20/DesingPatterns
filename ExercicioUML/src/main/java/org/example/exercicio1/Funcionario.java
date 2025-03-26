@@ -1,6 +1,6 @@
 package org.example.exercicio1;
 
-public class Funcionario {
+abstract class Funcionario {
 
     protected String nome;
     protected double salario;

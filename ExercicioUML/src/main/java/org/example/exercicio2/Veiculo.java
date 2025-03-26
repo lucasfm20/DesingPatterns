@@ -1,6 +1,6 @@
 package org.example.exercicio2;
 
-public class Veiculo {
+abstract class Veiculo {
     protected String modelo;
     protected String capacidade;
 

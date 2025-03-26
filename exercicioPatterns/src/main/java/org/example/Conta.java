@@ -34,31 +34,13 @@ public class Conta {
 
     public void deposita(int numero, double valor)
     {
-        if (numero==this.numero) {
-            this.saldo += valor;
-            System.out.println("Depósito de " + valor + " feito na conta " + numero + " novo valor de " + this.saldo);
-        }
-        else {
-            System.out.println("Conta " + numero + " não encontrada.");
-        }
-    }
+        double novoSaldo=getSaldo();
 
-    public void sacar(int numero, double valor)
-    {
-        if (numero==this.numero) {
-            this.saldo -= valor;
-            System.out.println("Saque de " + valor + " feito na conta " + numero + " novo valor de " + this.saldo);
-        }
-        else {
-            System.out.println("Conta " + numero + " não encontrada.");
-        }
-    }
+        novoSaldo+=saldo;
 
-    public void consulta(int numero)
-    {
-        if(numero==this.numero)
-        {
-            System.out.println("Saldo de "+ this.saldo + " disponível.");
-        }
+        setSaldo(novoSaldo);
+
+        System.out.println("Depósito de "+valor+ " feito na conta " + numero+" novo valor de " + novoSaldo);
+
     }
 }
